@@ -14,7 +14,7 @@ public class designButton extends BasicButtonUI {
         super.installUI(c);
         AbstractButton button = (AbstractButton) c;
         button.setOpaque(false);
-        button.setBorder(new EmptyBorder(5, 15, 5, 15));
+        button.setBorder(new EmptyBorder(10, 15, 10, 15));
     }
 
     @Override

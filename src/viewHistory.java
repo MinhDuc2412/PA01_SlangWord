@@ -26,7 +26,7 @@ public class viewHistory extends JFrame implements ActionListener{
 		topPanel.setLayout(new BoxLayout(topPanel,BoxLayout.Y_AXIS));
 		JLabel titleLabel = new JLabel();
 		titleLabel.setText("History Searched list");
-		titleLabel.setForeground(Color.white);
+		titleLabel.setForeground(Color.black);
 		titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 35));
 		titleLabel.setAlignmentX(CENTER_ALIGNMENT);
 		topPanel.add(titleLabel);
@@ -34,7 +34,6 @@ public class viewHistory extends JFrame implements ActionListener{
 		JPanel jPaneltitle=new JPanel();
 		jPaneltitle.setSize((new Dimension(50, 50)));
 		jPaneltitle.setLayout(new BoxLayout(jPaneltitle, BoxLayout.LINE_AXIS));
-		jPaneltitle.setBackground(new Color(222, 52, 49));
 		jPaneltitle.add(titleLabel);
 
 		JPanel jpEnd=new JPanel();
@@ -74,7 +73,7 @@ public class viewHistory extends JFrame implements ActionListener{
 		btnBack.setFocusable(false);
 		btnBack.setAlignmentX(CENTER_ALIGNMENT);
 		btnBack.setBackground(Color.white);
-		btnBack.setForeground(new Color(222, 52, 49));
+		btnBack.setForeground(Color.BLACK);
 		bottomPanel.add(btnBack);
 		bottomPanel.add(Box.createRigidArea(new Dimension(0, 100)));
         

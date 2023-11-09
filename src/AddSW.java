@@ -29,7 +29,7 @@ public class AddSW extends JFrame implements ActionListener {
         JPanel title = new JPanel();
         title.setLayout(new FlowLayout(FlowLayout.LEFT));
         JLabel title_ = new JLabel("Input slang word");
-        title_.setForeground(new Color(235, 116, 52));
+        title_.setForeground(Color.BLACK);
         title_.setFont(new Font("Times New Roman", Font.PLAIN, 15).deriveFont(Font.BOLD));
         title.add(title_);
         title.setAlignmentX(LEFT_ALIGNMENT);
@@ -50,15 +50,15 @@ public class AddSW extends JFrame implements ActionListener {
         Add.setAlignmentX(CENTER_ALIGNMENT);
         Add.addActionListener(this);
         Add.setFocusable(false);
-        Add.setBackground(new Color(58, 235, 52));
-        Add.setForeground(Color.white);
+        Add.setBackground(Color.white);
+        Add.setForeground(Color.black);
         Add.setUI(new designButton());
         Cancel = new JButton("Cancel");
         Cancel.setAlignmentX(CENTER_ALIGNMENT);
         Cancel.addActionListener(this);
         Cancel.setFocusable(false);
-        Cancel.setBackground(new Color(232, 55, 35));
-        Cancel.setForeground(Color.white);
+        Cancel.setBackground(Color.white);
+        Cancel.setForeground(Color.black);
         Cancel.setUI(new designButton());
         JPanel jpadd = new JPanel();
         jpadd.add(Add);
@@ -152,7 +152,7 @@ public class AddSW extends JFrame implements ActionListener {
                         j.setEnabled(false);
                         JScrollPane sp = new JScrollPane(j);
                         jMid.add(sp);
-                        //Bottom Pannel
+                        
                         JButton btnBack;
                         JPanel bottomPanel = new JPanel();
                         bottomPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -170,12 +170,12 @@ public class AddSW extends JFrame implements ActionListener {
                         btnBack.setForeground(new Color(222, 52, 49));
                         bottomPanel.add(btnBack);
                         bottomPanel.add(Box.createRigidArea(new Dimension(0, 20)));
-                        // Add to container
+                        
                         container.setLayout(new BorderLayout());
                         container.add(topPanel,BorderLayout.PAGE_START);
                         container.add(jMid, BorderLayout.CENTER);
                         container.add(bottomPanel,BorderLayout.PAGE_END);
-                        // Setting JFrame
+                        
                         ff.setTitle("List Slang Words");
                         ff.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                         ff.setVisible(true);
@@ -203,7 +203,7 @@ public class AddSW extends JFrame implements ActionListener {
                             topPanel.setLayout(new BoxLayout(topPanel,BoxLayout.Y_AXIS));
                             JLabel titleLabel = new JLabel();
                             titleLabel.setText("SlangWord just added");
-                            titleLabel.setForeground(Color.white);
+                            titleLabel.setForeground(Color.black);
                             titleLabel.setFont(new Font("Monaco", Font.PLAIN, 35));
                             titleLabel.setAlignmentX(CENTER_ALIGNMENT);
                             topPanel.add(titleLabel);
@@ -214,7 +214,6 @@ public class AddSW extends JFrame implements ActionListener {
                             JPanel jPaneltitle=new JPanel();
                             jPaneltitle.setSize((new Dimension(50, 50)));
                             jPaneltitle.setLayout(new BoxLayout(jPaneltitle, BoxLayout.LINE_AXIS));
-                            jPaneltitle.setBackground(new Color(222, 52, 49));
                             jPaneltitle.add(titleLabel);
 
                             JPanel jpEnd=new JPanel();
@@ -243,7 +242,7 @@ public class AddSW extends JFrame implements ActionListener {
                             j.setEnabled(false);
                             JScrollPane sp = new JScrollPane(j);
                             jMid.add(sp);
-                            //Bottom Pannel
+                            
                             JButton btnBack;
                             JPanel bottomPanel = new JPanel();
                             bottomPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -258,7 +257,7 @@ public class AddSW extends JFrame implements ActionListener {
                             btnBack.setFocusable(false);
                             btnBack.setAlignmentX(CENTER_ALIGNMENT);
                             btnBack.setBackground(Color.white);
-                            btnBack.setForeground(new Color(222, 52, 49));
+                            btnBack.setForeground(Color.BLACK);
                             bottomPanel.add(btnBack);
                             bottomPanel.add(Box.createRigidArea(new Dimension(0, 20)));
 
@@ -279,7 +278,7 @@ public class AddSW extends JFrame implements ActionListener {
                     } else if (a == JOptionPane.YES_OPTION) {
                         this.dispose();
                         JFrame jf = new JFrame();
-                        jf.setTitle("Choose word");
+                        jf.setTitle("Choose definition");
                         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                         jf.setVisible(true);
                         jf.setSize(380, 380);
@@ -337,7 +336,7 @@ public class AddSW extends JFrame implements ActionListener {
                                     selectedData = (String) j.getValueAt(selectedRow[i], 0);
                                     selectedDataNameWord = (String) j.getValueAt(selectedRow[i], 1);
                                 }
-                                int a = JOptionPane.showConfirmDialog(null, "Do you want this meaning: " + selectedDataNameWord + "?");
+                                int a = JOptionPane.showConfirmDialog(null, "Are you sure ?");
                                 if (a == JOptionPane.YES_OPTION) {
                                     int index = Integer.valueOf(selectedData).intValue();
                                     try {
@@ -352,8 +351,8 @@ public class AddSW extends JFrame implements ActionListener {
                                         topPanel.setLayout(new BoxLayout(topPanel,BoxLayout.Y_AXIS));
                                         JLabel titleLabel = new JLabel();
                                         titleLabel.setText("SlangWord just added");
-                                        titleLabel.setForeground(Color.white);
-                                        titleLabel.setFont(new Font("Monaco", Font.PLAIN, 35));
+                                        titleLabel.setForeground(Color.black);
+                                        titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 35));
                                         titleLabel.setAlignmentX(CENTER_ALIGNMENT);
                                         topPanel.add(titleLabel);
                                         JLabel jlb=new JLabel();
@@ -363,7 +362,6 @@ public class AddSW extends JFrame implements ActionListener {
                                         JPanel jPaneltitle=new JPanel();
                                         jPaneltitle.setSize((new Dimension(50, 50)));
                                         jPaneltitle.setLayout(new BoxLayout(jPaneltitle, BoxLayout.LINE_AXIS));
-                                        jPaneltitle.setBackground(new Color(222, 52, 49));
                                         jPaneltitle.add(titleLabel);
 
                                         JPanel jpEnd=new JPanel();
@@ -407,7 +405,7 @@ public class AddSW extends JFrame implements ActionListener {
                                         btnBack.setFocusable(false);
                                         btnBack.setAlignmentX(CENTER_ALIGNMENT);
                                         btnBack.setBackground(Color.white);
-                                        btnBack.setForeground(new Color(222, 52, 49));
+                                        btnBack.setForeground(Color.BLACK);
                                         bottomPanel.add(btnBack);
                                         bottomPanel.add(Box.createRigidArea(new Dimension(0, 20)));
 

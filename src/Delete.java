@@ -26,7 +26,7 @@ public class Delete extends JFrame implements ActionListener {
         topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
         JLabel titleLabel = new JLabel();
         titleLabel.setText("List Slang Words");
-        titleLabel.setForeground(Color.white);
+        titleLabel.setForeground(Color.black);
         titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 30));
         titleLabel.setAlignmentX(CENTER_ALIGNMENT);
         topPanel.add(titleLabel);
@@ -34,7 +34,6 @@ public class Delete extends JFrame implements ActionListener {
         JPanel jPaneltitle = new JPanel();
         jPaneltitle.setSize((new Dimension(50, 50)));
         jPaneltitle.setLayout(new BoxLayout(jPaneltitle, BoxLayout.LINE_AXIS));
-        jPaneltitle.setBackground(new Color(222, 52, 49));
         jPaneltitle.add(titleLabel);
 
         JPanel jpEnd = new JPanel();
@@ -119,7 +118,7 @@ public class Delete extends JFrame implements ActionListener {
         btnBack.setFocusable(false);
         btnBack.setAlignmentX(CENTER_ALIGNMENT);
         btnBack.setBackground(Color.white);
-        btnBack.setForeground(new Color(222, 52, 49));
+        btnBack.setForeground(Color.BLACK);
         jMid.add(sp);
         JPanel jend = new JPanel();
         jend.add(btnBack);
@@ -179,7 +178,6 @@ public class Delete extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
         if (e.getSource() == btnBack) {
             this.dispose();
             menu.GUI();

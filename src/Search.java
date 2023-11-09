@@ -9,27 +9,24 @@ public class Search extends JFrame implements ActionListener {
         Container con = this.getContentPane();
         JPanel jPanel=new JPanel();
         jPanel.setLayout(new BoxLayout(jPanel,BoxLayout.LINE_AXIS));
-        Searchbydef=new JButton("Find based definition");
+        Searchbydef=new JButton("Search by definition");
         Searchbydef.setAlignmentX(CENTER_ALIGNMENT);
         Searchbydef.addActionListener(this);
         Searchbydef.setFocusable(false);
-        Searchbydef.setBackground(new Color(255, 77, 0));
-        Searchbydef.setForeground(Color.white);
+        Searchbydef.setForeground(Color.black);
         Searchbydef.setUI(new designButton());
-        Searchbysw=new JButton("Find based slang word");
+        Searchbysw=new JButton("Search by slang word");
         Searchbysw.setAlignmentX(CENTER_ALIGNMENT);
         Searchbysw.addActionListener(this);
         Searchbysw.setFocusable(false);
-        Searchbysw.setBackground(new Color(255, 77, 0));
-        Searchbysw.setForeground(Color.white);
+        Searchbysw.setForeground(Color.black);
         Searchbysw.setUI(new designButton());
 
         btnBack=new JButton("Back");
         btnBack.setAlignmentX(CENTER_ALIGNMENT);
         btnBack.addActionListener(this);
         btnBack.setFocusable(false);
-        btnBack.setBackground(new Color(243, 159, 63));
-        btnBack.setForeground(Color.white);
+        btnBack.setForeground(Color.black);
         btnBack.setUI(new designButton());
         jPanel.add(Searchbydef);
         jPanel.add(Box.createRigidArea(new Dimension(10,0)));
@@ -48,7 +45,7 @@ public class Search extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
         this.setResizable(false);
-        this.setSize(new Dimension(400,130));
+        this.setSize(new Dimension(600,200));
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
     }

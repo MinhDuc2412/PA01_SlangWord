@@ -25,8 +25,8 @@ public class menu  extends JFrame implements ActionListener {
         JPanel topPanel=new JPanel();
         topPanel.setLayout(new BoxLayout(topPanel,BoxLayout.Y_AXIS));
         JLabel titleLabel = new JLabel();
-        titleLabel.setText("MENU");
-        titleLabel.setForeground(new Color(222, 52, 49));
+        titleLabel.setText("Slang Word Dictionary");
+        titleLabel.setForeground(new Color(0));
         titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 30));
         titleLabel.setAlignmentX(CENTER_ALIGNMENT);
         topPanel.add(titleLabel);
@@ -34,8 +34,9 @@ public class menu  extends JFrame implements ActionListener {
 		JPanel jPaneltitle=new JPanel();
 		jPaneltitle.setSize((new Dimension(50, 50)));
 		jPaneltitle.setLayout(new BoxLayout(jPaneltitle, BoxLayout.LINE_AXIS));
+        jPaneltitle.setBackground(new Color(135, 206, 250));
 		jPaneltitle.add(titleLabel);
-        jPaneltitle.setBackground(new Color(247, 245, 245));
+       
         jPaneltitle.setAlignmentX(CENTER_ALIGNMENT);
 
 		JPanel jpEnd=new JPanel();
@@ -51,8 +52,8 @@ public class menu  extends JFrame implements ActionListener {
         btnView.setAlignmentX(CENTER_ALIGNMENT);
         btnView.addActionListener(this);
         btnView.setFocusable(false);
-        btnView.setBackground(new Color(245, 66, 87));
-        btnView.setForeground(Color.white);
+        btnView.setBackground(new Color(255, 255, 255));
+        btnView.setForeground(Color.black);
         btnView.setUI(new designButton());
         btnView.setMaximumSize(size);
         btnView.setPreferredSize(size);
@@ -62,8 +63,8 @@ public class menu  extends JFrame implements ActionListener {
         btnSearch.setAlignmentX(CENTER_ALIGNMENT);
         btnSearch.addActionListener(this);
         btnSearch.setFocusable(false);
-        btnSearch.setBackground(new Color(245, 66, 87));
-        btnSearch.setForeground(Color.white);
+        btnSearch.setBackground(new Color(255, 255, 255));
+        btnSearch.setForeground(Color.black);
         btnSearch.setUI(new designButton());
         btnSearch.setMaximumSize(size);
         btnSearch.setPreferredSize(size);
@@ -73,8 +74,8 @@ public class menu  extends JFrame implements ActionListener {
         btnHistory.setAlignmentX(CENTER_ALIGNMENT);
         btnHistory.addActionListener(this);
         btnHistory.setFocusable(false);
-        btnHistory.setBackground(new Color(245, 66, 87));
-        btnHistory.setForeground(Color.white);
+        btnHistory.setBackground(new Color(255, 255, 255));
+        btnHistory.setForeground(Color.black);
         btnHistory.setUI(new designButton());
         btnHistory.setMaximumSize(size);
         btnHistory.setPreferredSize(size);
@@ -84,8 +85,8 @@ public class menu  extends JFrame implements ActionListener {
         btnAdd.setAlignmentX(CENTER_ALIGNMENT);
         btnAdd.addActionListener(this);
         btnAdd.setFocusable(false);
-        btnAdd.setBackground(new Color(245, 66, 87));
-        btnAdd.setForeground(Color.white);
+        btnAdd.setBackground(new Color(255, 255, 255));
+        btnAdd.setForeground(Color.black);
         btnAdd.setUI(new designButton());
         btnAdd.setMaximumSize(size);
         btnAdd.setPreferredSize(size);
@@ -95,8 +96,8 @@ public class menu  extends JFrame implements ActionListener {
         btnDelete.setAlignmentX(CENTER_ALIGNMENT);
         btnDelete.addActionListener(this);
         btnDelete.setFocusable(false);
-        btnDelete.setBackground(new Color(245, 66, 87));
-        btnDelete.setForeground(Color.white);
+        btnDelete.setBackground(new Color(255, 255, 255));
+        btnDelete.setForeground(Color.black);
         btnDelete.setUI(new designButton());
         btnDelete.setMaximumSize(size);
         btnDelete.setPreferredSize(size);
@@ -106,8 +107,8 @@ public class menu  extends JFrame implements ActionListener {
         btnEdit.setAlignmentX(CENTER_ALIGNMENT);
         btnEdit.addActionListener(this);
         btnEdit.setFocusable(false);
-        btnEdit.setBackground(new Color(245, 66, 87));
-        btnEdit.setForeground(Color.white);
+        btnEdit.setBackground(new Color(255, 255, 255));
+        btnEdit.setForeground(Color.black);
         btnEdit.setUI(new designButton());
         btnEdit.setMaximumSize(size);
         btnEdit.setPreferredSize(size);
@@ -117,8 +118,8 @@ public class menu  extends JFrame implements ActionListener {
         btnReset.setAlignmentX(CENTER_ALIGNMENT);
         btnReset.addActionListener(this);
         btnReset.setFocusable(false);
-        btnReset.setBackground(new Color(245, 66, 87));
-        btnReset.setForeground(Color.white);
+        btnReset.setBackground(new Color(255, 255, 255));
+        btnReset.setForeground(Color.black);
         btnReset.setUI(new designButton());
         btnReset.setMaximumSize(size);
         btnReset.setPreferredSize(size);
@@ -128,8 +129,8 @@ public class menu  extends JFrame implements ActionListener {
         btnRandom.setAlignmentX(CENTER_ALIGNMENT);
         btnRandom.addActionListener(this);
         btnRandom.setFocusable(false);
-        btnRandom.setBackground(new Color(245, 66, 87));
-        btnRandom.setForeground(Color.white);
+        btnRandom.setBackground(new Color(255, 255, 255));
+        btnRandom.setForeground(Color.black);
         btnRandom.setUI(new designButton());
         btnRandom.setMaximumSize(size);
         btnRandom.setPreferredSize(size);
@@ -139,8 +140,8 @@ public class menu  extends JFrame implements ActionListener {
         btnQuiz.setAlignmentX(CENTER_ALIGNMENT);
         btnQuiz.addActionListener(this);
         btnQuiz.setFocusable(false);
-        btnQuiz.setBackground(new Color(245, 66, 87));
-        btnQuiz.setForeground(Color.white);
+        btnQuiz.setBackground(new Color(255, 255, 255));
+        btnQuiz.setForeground(Color.black);
         btnQuiz.setUI(new designButton());
         btnQuiz.setMaximumSize(size);
         btnQuiz.setPreferredSize(size);
@@ -151,7 +152,7 @@ public class menu  extends JFrame implements ActionListener {
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
 		container.add(topPanel);
 
-        container.add((Box.createRigidArea(new Dimension(0,20))));
+        container.add((Box.createRigidArea(new Dimension(0,40))));
         container.add(btnView);
         container.add((Box.createRigidArea(new Dimension(0,10))));
         container.add(btnSearch);
@@ -178,7 +179,7 @@ public class menu  extends JFrame implements ActionListener {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("Menu");
 		this.setVisible(true);
-		this.setSize(450, 450);
+		this.setSize(800, 450);
         this.setResizable(false);
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);

@@ -8,7 +8,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class Searchsw extends JFrame implements ActionListener {
-    JButton btnBack, ok, loadAll;
+    JButton btnBack, ok;
     JTextField jIDf;
     SlangwordManagement slangWord = SlangwordManagement.getInstance();
     JTable j;
@@ -21,16 +21,16 @@ public class Searchsw extends JFrame implements ActionListener {
         JPanel topPanel = new JPanel();
         topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
         JLabel titleLabel = new JLabel();
-        titleLabel.setText("List Definition of Slang Words");
-        titleLabel.setForeground(Color.white);
-        titleLabel.setFont(new Font("Monaco", Font.PLAIN, 30));
+        titleLabel.setText("List of Slang Words");
+        titleLabel.setForeground(Color.black);
+        titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 30));
         titleLabel.setAlignmentX(CENTER_ALIGNMENT);
         topPanel.add(titleLabel);
 
         JPanel jPaneltitle = new JPanel();
         jPaneltitle.setSize((new Dimension(50, 50)));
         jPaneltitle.setLayout(new BoxLayout(jPaneltitle, BoxLayout.LINE_AXIS));
-        jPaneltitle.setBackground(new Color(222, 52, 49));
+        
         jPaneltitle.add(titleLabel);
 
         JPanel jpEnd = new JPanel();
@@ -86,7 +86,7 @@ public class Searchsw extends JFrame implements ActionListener {
         btnBack.setFocusable(false);
         btnBack.setAlignmentX(CENTER_ALIGNMENT);
         btnBack.setBackground(Color.white);
-        btnBack.setForeground(new Color(222, 52, 49));
+        btnBack.setForeground(new Color(0));
         jMid.add(sp);
         JPanel jend = new JPanel();
         jend.add(btnBack);
@@ -115,18 +115,6 @@ public class Searchsw extends JFrame implements ActionListener {
             Search.GUI();
         } else if (e.getSource().equals(ok)) {
           ChildThread childThread=new ChildThread(jpb);
-        }else if (e.getSource().equals(loadAll)) {
-            jpb.setValue(0);
-            String id = jIDf.getText().toString();
-            String[][] findDef = slangWord.getSW_Data();
-            String[] columnNames = {"STT", "Slang Word", "Meaning"};
-            DefaultTableModel model = new DefaultTableModel(findDef, columnNames);
-            DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-            j.setModel(model);
-            centerRenderer.setHorizontalAlignment(JLabel.CENTER);
-            j.getColumnModel().getColumn(0).setCellRenderer(centerRenderer);
-            j.getColumnModel().getColumn(1).setCellRenderer(centerRenderer);
-            j.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
         }
     }
     class ChildThread extends Thread {

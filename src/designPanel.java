@@ -13,9 +13,9 @@ public class designPanel extends JPanel{
         g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
         int w = getWidth();
         int h = getHeight();
-        Color color2 = new Color(230, 145, 154);
-        Color color1 = Color.WHITE;
-        GradientPaint gp = new GradientPaint(0, 0, color1, 0, h, color2);
+        Color color2 = new Color(135, 206, 250);
+        Color color1 = new Color(128,0,128);
+        GradientPaint gp = new GradientPaint(0, 0, color2, 0, h, color1);
         g2d.setPaint(gp);
         g2d.fillRect(0, 0, w, h);
     }

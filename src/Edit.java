@@ -31,15 +31,14 @@ public class Edit extends JFrame implements ActionListener {
         topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
         JLabel titleLabel = new JLabel();
         titleLabel.setText("List Slang Words");
-        titleLabel.setForeground(Color.white);
-        titleLabel.setFont(new Font("Monaco", Font.PLAIN, 30));
+        titleLabel.setForeground(Color.black);
+        titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 30));
         titleLabel.setAlignmentX(CENTER_ALIGNMENT);
         topPanel.add(titleLabel);
 
         JPanel jPaneltitle = new JPanel();
         jPaneltitle.setSize((new Dimension(50, 50)));
         jPaneltitle.setLayout(new BoxLayout(jPaneltitle, BoxLayout.LINE_AXIS));
-        jPaneltitle.setBackground(new Color(222, 52, 49));
         jPaneltitle.add(titleLabel);
 
         JPanel jpEnd = new JPanel();
@@ -93,16 +92,16 @@ public class Edit extends JFrame implements ActionListener {
         btnBack.setFocusable(false);
         btnBack.setAlignmentX(CENTER_ALIGNMENT);
         btnBack.setBackground(Color.white);
-        btnBack.setForeground(new Color(222, 52, 49));
+        btnBack.setForeground(Color.BLACK);
         jMid.add(sp);
         JPanel jend = new JPanel();
         jend.add(btnBack);
-        savechanged = new JButton("Save Change");
+        savechanged = new JButton("Save Changes");
         savechanged.addActionListener(this);
         savechanged.setFocusable(false);
         savechanged.setAlignmentX(CENTER_ALIGNMENT);
         savechanged.setBackground(Color.white);
-        savechanged.setForeground(new Color(208, 208, 27, 255));
+        savechanged.setForeground(Color.BLACK);
         jend.add(savechanged);
 
 
@@ -113,7 +112,7 @@ public class Edit extends JFrame implements ActionListener {
         container.add(Box.createRigidArea(new Dimension(30, 0)), BorderLayout.EAST);
         container.add(jend, BorderLayout.PAGE_END);
         
-        this.setTitle("Random Slang Word");
+        this.setTitle("Edit");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
         this.setSize(700, 700);
@@ -169,7 +168,7 @@ public class Edit extends JFrame implements ActionListener {
                     if (arrSelect[0]!=null || arrSelect[1]!=null){
                         if (check!=0) {
                             int a = JOptionPane.showConfirmDialog(null,
-                                    "Did you want this meaning: " + arrSelect[1] + "?");
+                                    "Are you sure ?");
                             String[][] findDef = new String[1][3];
                             findDef[0][0]="1";
                             findDef[0][1]=arrSelect[0];
@@ -234,7 +233,7 @@ public class Edit extends JFrame implements ActionListener {
                     if (arrSelect[0]!=null || arrSelect[1]!=null){
                     if (check!=0) {
                         int a = JOptionPane.showConfirmDialog(null,
-                                "Did you want this meaning: " + arrSelect[1] + "?");
+                                "Are you sure ?");
                         String[][] findDef = new String[1][3];
                         findDef[0][0]="1";
                         findDef[0][1]=arrSelect[0];

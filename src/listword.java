@@ -14,9 +14,9 @@ public class listword extends JFrame implements ActionListener{
 		JPanel topPanel=new JPanel();
 		topPanel.setLayout(new BoxLayout(topPanel,BoxLayout.Y_AXIS));
 		JLabel titleLabel = new JLabel();
-		titleLabel.setText("SLANGWORDS  LIST");
-		titleLabel.setForeground(Color.white);
-		titleLabel.setFont(new Font("Monaco", Font.PLAIN, 35));
+		titleLabel.setText("SLANGWORDS LIST");
+		titleLabel.setForeground(Color.black);
+		titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 35));
 		titleLabel.setAlignmentX(CENTER_ALIGNMENT);
 		topPanel.add(titleLabel);
 		JLabel jlb=new JLabel();
@@ -26,7 +26,6 @@ public class listword extends JFrame implements ActionListener{
 		JPanel jPaneltitle=new JPanel();
 		jPaneltitle.setSize((new Dimension(50, 50)));
 		jPaneltitle.setLayout(new BoxLayout(jPaneltitle, BoxLayout.LINE_AXIS));
-		jPaneltitle.setBackground(new Color(222, 52, 49));
 		jPaneltitle.add(titleLabel);
 		
 		JPanel jpEnd=new JPanel();
@@ -59,7 +58,7 @@ public class listword extends JFrame implements ActionListener{
 		btnBack.setFocusable(false);
 		btnBack.setAlignmentX(CENTER_ALIGNMENT);
 		btnBack.setBackground(Color.white);
-		btnBack.setForeground(new Color(222, 52, 49));
+		btnBack.setForeground(new Color(0));
 		bottomPanel.add(btnBack);
 		bottomPanel.add(Box.createRigidArea(new Dimension(0, 100)));
         
