@@ -15,13 +15,13 @@ import java.io.IOException;
 public class menu  extends JFrame implements ActionListener {
     JButton btnView,btnSearch,btnHistory,btnAdd,btnEdit,btnDelete,btnReset,
     btnRandom,btnQuiz;
-    SlangWord slangWord= SlangWord.getInstance();
+    SlangwordManagement slangWord= SlangwordManagement.getInstance();
     menu(){
-        stylepanel spn=new stylepanel();
+        designPanel spn=new designPanel();
         Container container1 = this.getContentPane();
         Container container=new Container();
         Dimension size = new Dimension(160, 25);
-        //Top Pannel
+        
         JPanel topPanel=new JPanel();
         topPanel.setLayout(new BoxLayout(topPanel,BoxLayout.Y_AXIS));
         JLabel titleLabel = new JLabel();
@@ -53,7 +53,7 @@ public class menu  extends JFrame implements ActionListener {
         btnView.setFocusable(false);
         btnView.setBackground(new Color(245, 66, 87));
         btnView.setForeground(Color.white);
-        btnView.setUI(new stylebutton());
+        btnView.setUI(new designButton());
         btnView.setMaximumSize(size);
         btnView.setPreferredSize(size);
         btnView.setMaximumSize(size);
@@ -64,7 +64,7 @@ public class menu  extends JFrame implements ActionListener {
         btnSearch.setFocusable(false);
         btnSearch.setBackground(new Color(245, 66, 87));
         btnSearch.setForeground(Color.white);
-        btnSearch.setUI(new stylebutton());
+        btnSearch.setUI(new designButton());
         btnSearch.setMaximumSize(size);
         btnSearch.setPreferredSize(size);
         btnSearch.setMaximumSize(size);
@@ -75,7 +75,7 @@ public class menu  extends JFrame implements ActionListener {
         btnHistory.setFocusable(false);
         btnHistory.setBackground(new Color(245, 66, 87));
         btnHistory.setForeground(Color.white);
-        btnHistory.setUI(new stylebutton());
+        btnHistory.setUI(new designButton());
         btnHistory.setMaximumSize(size);
         btnHistory.setPreferredSize(size);
         btnHistory.setMaximumSize(size);
@@ -86,7 +86,7 @@ public class menu  extends JFrame implements ActionListener {
         btnAdd.setFocusable(false);
         btnAdd.setBackground(new Color(245, 66, 87));
         btnAdd.setForeground(Color.white);
-        btnAdd.setUI(new stylebutton());
+        btnAdd.setUI(new designButton());
         btnAdd.setMaximumSize(size);
         btnAdd.setPreferredSize(size);
         btnAdd.setMaximumSize(size);
@@ -97,7 +97,7 @@ public class menu  extends JFrame implements ActionListener {
         btnDelete.setFocusable(false);
         btnDelete.setBackground(new Color(245, 66, 87));
         btnDelete.setForeground(Color.white);
-        btnDelete.setUI(new stylebutton());
+        btnDelete.setUI(new designButton());
         btnDelete.setMaximumSize(size);
         btnDelete.setPreferredSize(size);
         btnDelete.setMaximumSize(size);
@@ -108,7 +108,7 @@ public class menu  extends JFrame implements ActionListener {
         btnEdit.setFocusable(false);
         btnEdit.setBackground(new Color(245, 66, 87));
         btnEdit.setForeground(Color.white);
-        btnEdit.setUI(new stylebutton());
+        btnEdit.setUI(new designButton());
         btnEdit.setMaximumSize(size);
         btnEdit.setPreferredSize(size);
         btnEdit.setMaximumSize(size);
@@ -119,7 +119,7 @@ public class menu  extends JFrame implements ActionListener {
         btnReset.setFocusable(false);
         btnReset.setBackground(new Color(245, 66, 87));
         btnReset.setForeground(Color.white);
-        btnReset.setUI(new stylebutton());
+        btnReset.setUI(new designButton());
         btnReset.setMaximumSize(size);
         btnReset.setPreferredSize(size);
         btnReset.setMaximumSize(size);
@@ -130,7 +130,7 @@ public class menu  extends JFrame implements ActionListener {
         btnRandom.setFocusable(false);
         btnRandom.setBackground(new Color(245, 66, 87));
         btnRandom.setForeground(Color.white);
-        btnRandom.setUI(new stylebutton());
+        btnRandom.setUI(new designButton());
         btnRandom.setMaximumSize(size);
         btnRandom.setPreferredSize(size);
         btnRandom.setMaximumSize(size);
@@ -141,7 +141,7 @@ public class menu  extends JFrame implements ActionListener {
         btnQuiz.setFocusable(false);
         btnQuiz.setBackground(new Color(245, 66, 87));
         btnQuiz.setForeground(Color.white);
-        btnQuiz.setUI(new stylebutton());
+        btnQuiz.setUI(new designButton());
         btnQuiz.setMaximumSize(size);
         btnQuiz.setPreferredSize(size);
         btnQuiz.setMaximumSize(size);
@@ -226,7 +226,7 @@ public class menu  extends JFrame implements ActionListener {
         else if (e.getSource()==btnDelete){
             this.dispose();
             try {
-                new deleteslangword();
+                new Delete();
             } catch (Exception e1) {
 
                 e1.printStackTrace();
@@ -234,7 +234,7 @@ public class menu  extends JFrame implements ActionListener {
         }
         else if (e.getSource()==btnReset){
             try {
-                slangWord.Reset();
+                slangWord.resetSlangWord();
                 JOptionPane.showMessageDialog(this,"Reset successfully");  
             } catch (IOException e1) {
 
@@ -243,13 +243,13 @@ public class menu  extends JFrame implements ActionListener {
         }
         else if (e.getSource().equals(btnRandom)){
             this.dispose();
-            Random.GUI();
+            RandomSW.GUI();
         }else if (e.getSource().equals(btnEdit)){
             this.dispose();
             Edit.GUI();
         }else if (e.getSource().equals(btnQuiz)){
             this.dispose();
-            Quiz.GUI();
+            //Quiz.GUI();
         }
     }
 
