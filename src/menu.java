@@ -208,7 +208,7 @@ public class menu  extends JFrame implements ActionListener {
         else if (e.getSource()==btnHistory){
             this.dispose();
             try {
-                viewhistory.GUI();
+                viewHistory.GUI();
             } catch (Exception e1) {
 
                 e1.printStackTrace();
@@ -217,7 +217,7 @@ public class menu  extends JFrame implements ActionListener {
         else if (e.getSource()==btnAdd){
             this.dispose();
             try {
-                new addslangword();
+                new AddSW();
             } catch (Exception e1) {
 
                 e1.printStackTrace();

@@ -96,7 +96,6 @@ public class SlangwordManagement {
         return size;
     }
 
-    //insert need for
     public int getIndexMeaningofSW(String sw, String meaning) {
         String[][] data = getSW_Data();
         for (int i = 0; i < data.length; i++) {
