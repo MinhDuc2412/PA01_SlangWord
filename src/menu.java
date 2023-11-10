@@ -250,7 +250,7 @@ public class menu  extends JFrame implements ActionListener {
             Edit.GUI();
         }else if (e.getSource().equals(btnQuiz)){
             this.dispose();
-            //Quiz.GUI();
+            Quiz.GUI();
         }
     }
 
