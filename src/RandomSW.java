@@ -83,8 +83,8 @@ public class RandomSW extends JFrame implements ActionListener {
         back.setAlignmentX(CENTER_ALIGNMENT);
         back.addActionListener(this);
         back.setFocusable(false);
-        back.setBackground(new Color(232, 55, 35));
-        back.setForeground(Color.white);
+        back.setBackground(Color.white);
+        back.setForeground(Color.black);
         back.setUI(new designButton());
         back.setPreferredSize(new Dimension(70,30));
         
@@ -92,8 +92,8 @@ public class RandomSW extends JFrame implements ActionListener {
         refresh.setAlignmentX(CENTER_ALIGNMENT);
         refresh.addActionListener(this);
         refresh.setFocusable(false);
-        refresh.setBackground(new Color(18, 0, 147));
-        refresh.setForeground(Color.white);
+        refresh.setBackground(Color.white);
+        refresh.setForeground(Color.BLACK);
         refresh.setUI(new designButton());
         refresh.setPreferredSize(new Dimension(75,30));
 

@@ -112,7 +112,7 @@ public class AddSW extends JFrame implements ActionListener {
                         topPanel.setLayout(new BoxLayout(topPanel,BoxLayout.Y_AXIS));
                         JLabel titleLabel = new JLabel();
                         titleLabel.setText("SlangWord just added");
-                        titleLabel.setForeground(Color.white);
+                        titleLabel.setForeground(Color.black);
                         titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 35));
                         titleLabel.setAlignmentX(CENTER_ALIGNMENT);
                         topPanel.add(titleLabel);
@@ -123,7 +123,6 @@ public class AddSW extends JFrame implements ActionListener {
                         JPanel jPaneltitle=new JPanel();
                         jPaneltitle.setSize((new Dimension(50, 50)));
                         jPaneltitle.setLayout(new BoxLayout(jPaneltitle, BoxLayout.LINE_AXIS));
-                        jPaneltitle.setBackground(new Color(222, 52, 49));
                         jPaneltitle.add(titleLabel);
                         
                         JPanel jpEnd=new JPanel();
@@ -167,7 +166,7 @@ public class AddSW extends JFrame implements ActionListener {
                         btnBack.setFocusable(false);
                         btnBack.setAlignmentX(CENTER_ALIGNMENT);
                         btnBack.setBackground(Color.white);
-                        btnBack.setForeground(new Color(222, 52, 49));
+                        btnBack.setForeground(Color.BLACK);
                         bottomPanel.add(btnBack);
                         bottomPanel.add(Box.createRigidArea(new Dimension(0, 20)));
                         
@@ -204,7 +203,7 @@ public class AddSW extends JFrame implements ActionListener {
                             JLabel titleLabel = new JLabel();
                             titleLabel.setText("SlangWord just added");
                             titleLabel.setForeground(Color.black);
-                            titleLabel.setFont(new Font("Monaco", Font.PLAIN, 35));
+                            titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 35));
                             titleLabel.setAlignmentX(CENTER_ALIGNMENT);
                             topPanel.add(titleLabel);
                             JLabel jlb=new JLabel();
@@ -308,8 +307,7 @@ public class AddSW extends JFrame implements ActionListener {
                         jBack.setAlignmentX(CENTER_ALIGNMENT);
                         jBack.addActionListener(this);
                         jBack.setFocusable(false);
-                        jBack.setBackground(new Color(232, 55, 35));
-                        jBack.setForeground(Color.white);
+                        jBack.setForeground(Color.black);
                         jBack.setUI(new designButton());
                         con.add(jpn, BorderLayout.PAGE_START);
                         con.add(j, BorderLayout.CENTER);
